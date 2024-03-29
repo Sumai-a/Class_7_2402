@@ -76,16 +76,18 @@ a{
     border: 1px solid lightslategray;
     border-radius: 5px;
     color: lightslategray;
-    visibility: visible;
-    opacity: 1;
+    visibility: hidden;
+    opacity: 0;
     box-shadow: 2px 2px 10px gray;
-    left: 150px;
+    left: -62px;
+    transition: 0.5s;
 }
 
 
 .nav_2 .parent:hover .dropdown{
     visibility: visible;
     opacity: 1;
+    top: 63px;
 }
 
 
@@ -111,4 +113,36 @@ a{
 }
 .parent{
     position: relative;
+}
+
+.sub_parent{
+    position: relative;
+}
+
+.sub_dropdown{
+    position: absolute;
+    top: 0;
+    width: 150px;
+    border: 1px solid lightslategray;
+    border-radius: 5px;
+    color: lightslategray;
+    visibility: visible;
+    opacity: 1;
+    box-shadow: 2px 2px 10px gray;
+    left: 300px;
+    transition: 0.5s;
+    visibility: hidden;
+}
+
+.sub_dropdown li{
+    width: 100%;
+}
+
+.sub_dropdown li a{
+    width: 100%;
+}
+
+.nav_2 .parent:hover .dropdown .sub_parent:hover .sub_dropdown{
+    visibility: visible;
+    opacity: 1;
 }
